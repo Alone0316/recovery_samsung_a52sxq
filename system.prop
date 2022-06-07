@@ -1,0 +1,7 @@
+# USB
+persist.sys.usb.config=mtp,adb
+ro.adb.secure=0
+sys.usb.controller=a600000.dwc3
+sys.usb.mtp.batchcancel=1
+vendor.usb.diag.func.name=ffs
+vendor.usb.use_ffs_mtp=1

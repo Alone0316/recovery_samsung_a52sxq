@@ -1,0 +1,3 @@
+# USB config
+vendor.usb.use_ffs_mtp=1
+

@@ -66,6 +66,10 @@ TARGET_KERNEL_CONFIG := a52sxq_defconfig
 # Platform
 TARGET_BOARD_PLATFORM := lahaina
 
+# Props
+TARGET_SYSTEM_PROP += $(DEVICE_PATH)/system.prop
+TARGET_VENDOR_PROP += $(DEVICE_PATH)/vendor.prop
+
 # Recovery
 TARGET_RECOVERY_PIXEL_FORMAT := RGBX_8888
 
@@ -73,6 +77,9 @@ TARGET_RECOVERY_PIXEL_FORMAT := RGBX_8888
 PLATFORM_SECURITY_PATCH := 2099-12-31
 VENDOR_SECURITY_PATCH := 2099-12-31
 PLATFORM_VERSION := 16.1.0
+
+# USB
+TARGET_USE_CUSTOM_LUN_FILE_PATH := "/config/usb_gadget/g1/functions/mass_storage.0/lun.%d/file"
 
 # TWRP Configuration
 TW_THEME := portrait_hdpi
