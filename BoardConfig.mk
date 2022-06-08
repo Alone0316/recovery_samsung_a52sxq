@@ -63,6 +63,10 @@ TARGET_KERNEL_HEADER_ARCH := arm64
 TARGET_KERNEL_SOURCE := kernel/samsung/a52sxq
 TARGET_KERNEL_CONFIG := a52sxq_defconfig
 
+# Logs
+TWRP_INCLUDE_LOGCAT := true
+TARGET_USES_LOGD := true
+
 # Platform
 TARGET_BOARD_PLATFORM := lahaina
 
