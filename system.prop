@@ -1,3 +1,7 @@
+# Board
+ro.product.board=lahaina
+ro.board.platform=lahaina
+
 # USB
 persist.sys.usb.config=mtp,adb
 persist.service.adb.enable=1
@@ -8,3 +12,4 @@ sys.usb.controller=a600000.dwc3
 sys.usb.mtp.batchcancel=1
 vendor.usb.diag.func.name=ffs
 vendor.usb.use_ffs_mtp=1
+
