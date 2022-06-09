@@ -63,6 +63,15 @@ TARGET_KERNEL_HEADER_ARCH := arm64
 TARGET_KERNEL_SOURCE := kernel/samsung/a52sxq
 TARGET_KERNEL_CONFIG := a52sxq_defconfig
 
+# Kernel modules
+BOOT_KERNEL_MODULES := \
+     stm_ts.ko
+
+KERNEL_MODULES_LOAD_RAW := $(strip $(shell cat device/samsung/a52sxq/modules.load))
+KERNEL_MODULES_LOAD := $(foreach m,$(KERNEL_MODULES_LOAD_RAW),$(notdir $(m)))
+BOARD_VENDOR_KERNEL_MODULES_LOAD := $(filter-out $(BOOT_KERNEL_MODULES), $(KERNEL_MODULES_LOAD))
+BOARD_VENDOR_RAMDISK_KERNEL_MODULES_LOAD := $(filter $(BOOT_KERNEL_MODULES), $(KERNEL_MODULES_LOAD))
+
 # Logs
 TWRP_INCLUDE_LOGCAT := true
 TARGET_USES_LOGD := true
