@@ -65,7 +65,8 @@ TARGET_KERNEL_CONFIG := a52sxq_defconfig
 
 # Kernel modules
 BOOT_KERNEL_MODULES := \
-     stm_ts.ko
+     stm_ts.ko \
+     sec_tclm_v2.ko
 
 KERNEL_MODULES_LOAD_RAW := $(strip $(shell cat device/samsung/a52sxq/modules.load))
 KERNEL_MODULES_LOAD := $(foreach m,$(KERNEL_MODULES_LOAD_RAW),$(notdir $(m)))
