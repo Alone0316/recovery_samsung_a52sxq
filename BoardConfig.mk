@@ -63,6 +63,10 @@ TARGET_KERNEL_HEADER_ARCH := arm64
 TARGET_KERNEL_SOURCE := kernel/samsung/a52sxq
 TARGET_KERNEL_CONFIG := a52sxq_defconfig
 
+# Vendor modules
+BUILD_BROKEN_ELF_PREBUILT_PRODUCT_COPY_FILES := true
+TW_LOAD_VENDOR_MODULES := "stm_ts.ko sec_tclm_v2.ko sec_secure_touch.ko sec_cmd.ko sec_common_fn.ko sec_tsp_dumpkey.ko sec_tsp_log.ko"
+
 # Logs
 TWRP_INCLUDE_LOGCAT := true
 TARGET_USES_LOGD := true
